@@ -1,1 +1,2 @@
-export const main = (): string => "Hello World!";
+export * from "./lib/permission";
+export * from "./lib/BitField";
