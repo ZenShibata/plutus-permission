@@ -25,10 +25,10 @@ jobs:
           registry-url: ${{ matrix.registry }}
         
       - name: Install dependencies
-       run: npm ci
+        run: npm ci
 
       - name: Compile/Build TypeScript project
-       run: npm run build
+        run: npm run build
 
       - name: Publish package to npm and GitHub packages registry
         run: npm publish --access restricted
