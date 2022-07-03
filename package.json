@@ -30,7 +30,7 @@
     "dist/**/*.d*"
   ],
   "scripts": {
-    "build": "rimraf dist && tsc -b src && rollup -c rollup.bundle.ts && npm run esm:default && rimraf ./dist/lib/BitField.d.ts && copyfiles -V -f ./src/lib/BitField.d.ts ./dist/lib/BitField.d.ts",
+    "build": "rimraf dist && tsc -b src && rollup -c rollup.bundle.ts && npm run esm:default && rimraf ./dist/lib/BitField.d.ts && copyfiles -V -f ./src/lib/BitField.d.ts ./dist/lib/",
     "compile": "tsc --build tsconfig.json",
     "esm:default": "gen-esm-wrapper dist/index.js dist/index.mjs",
     "lint": "eslint . --ignore-path .gitignore --ext .ts",
