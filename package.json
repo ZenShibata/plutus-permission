@@ -1,6 +1,6 @@
 {
   "name": "@zenshibata/plutus-permission",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A module for resolving Plutus' users permissions",
   "keywords": [
     "bitfield",
