@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/naming-convention */
-import { BitField } from "./BitField";
+import { BitField, BitFieldResolvable } from "./BitField";
 
 export type PermissionResolvable = (keyof typeof Permission["FLAGS"])[] | keyof typeof Permission["FLAGS"];
 
@@ -15,6 +15,10 @@ export class Permission extends BitField<keyof typeof Permission["FLAGS"]> {
         VIEW_TRANSACTION_LIST: 1 << 5,
         VIEW_USER_LIST: 1 << 6
     };
+
+    public constructor(bits?: BitFieldResolvable<keyof typeof Permission["FLAGS"], number>) {
+        super(bits);
+    }
 
     /**
     * Checks whether the bitfield has a permission, or any of multiple permissions.
@@ -34,3 +38,5 @@ export class Permission extends BitField<keyof typeof Permission["FLAGS"]> {
         return (checkAdministrator && super.has(Permission.FLAGS.ADMINISTRATOR)) || super.has(permission);
     }
 }
+
+BitField.Flags = Permission.FLAGS;

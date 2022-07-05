@@ -1,6 +1,6 @@
 export class BitField<S extends string, N extends bigint | number = number> {
     public bitfield: N;
-    public static FLAGS: Record<string, bigint | number>;
+    public static Flags: Record<string, bigint | number>;
     public constructor(bits?: BitFieldResolvable<S, N>);
     public add(...bits: BitFieldResolvable<S, N>[]): BitField<S, N>;
     public any(bit: BitFieldResolvable<S, N>): boolean;
