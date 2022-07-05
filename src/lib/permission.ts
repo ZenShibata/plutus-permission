@@ -12,7 +12,8 @@ export class Permission extends BitField<keyof typeof Permission["FLAGS"]> {
         VIEW_ADMIN_CHAT: 1 << 2,
         VIEW_ORDER_DETAIL: 1 << 3,
         VIEW_ORDER_LIST: 1 << 4,
-        VIEW_TRANSACTION_LIST: 1 << 5
+        VIEW_TRANSACTION_LIST: 1 << 5,
+        VIEW_USER_LIST: 1 << 6
     };
 
     /**
